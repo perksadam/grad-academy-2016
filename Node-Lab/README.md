@@ -56,6 +56,8 @@ Open a command window in the same directory as your webserver.js file and run th
     node webServer
 
 You should see a message that your server has started. Open a browser and navigate to the url our server is listening on. What do you see?
+
+
 ----
 
 #
