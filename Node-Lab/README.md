@@ -1,6 +1,8 @@
 # Creating A Node Web Server
+----
+Create a javascript file and call it *webserver.js*
 
-Import the http module into your app
+In *webserver.js* load the http module at the top of the file
 ```javascript
 var http = require('http');
 ``` 
@@ -15,14 +17,8 @@ Create a server using the http.createServer method
 >
 ```javascript
 var server = http.createServer(function(req, res) {
-    if(req.url == "/sample.html") {
-
-        fs.readFile("sample.html", function(err, text){
-            res.setHeader("Content-Type", "text/html");
-            res.end(text);
-        });
-        return;
-    }
+    //code for our server goes here
+    
 });
 ```
  ## We need to tell the server how to handle each request
@@ -85,3 +81,34 @@ You should see a message that your server has started. Open a browser and naviga
 </html>
 ```
 
+## Returning a file from our server
+----
+**We will need to use node's File System module to read the file we want to return**
+
+Load the File System module at the top of *webserver.js*
+
+```javascript
+var fs = require('fs');
+```
+
+**We need to tell our server to listen for certain requests and handle them accordingly.**
+
+In our server body, check the url of the request to see if it matches "sample.html"
+
+```javascript
+if(req.url == "/sample.html") {
+    //our server will do something different when the request is for sample.html
+        
+    }
+```
+
+Inside the *if* block, read the contents of our *sample.html* file and return it using res.end(). We will then *return* out of the code block;
+```javascript
+fs.readFile("sample.html", function(err, text){
+    res.setHeader("Content-Type", "text/html");
+    res.end(text);
+});
+return;
+```
+
+Start your server again and use a browser to navigate to our servers url as before. You should see the same text as last time. Now append "*/sample.html*" to the end of the url. The server should be returning the *sample.html* file.
