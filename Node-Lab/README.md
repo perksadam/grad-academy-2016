@@ -1,5 +1,5 @@
 # Creating A Node Web Server
-----
+
 Create a javascript file and call it *webserver.js*
 
 In *webserver.js* load the http module at the top of the file
@@ -14,15 +14,14 @@ var serverUrl = "localhost";
 ``` 
 Create a server using the http.createServer method
 
->
 ```javascript
 var server = http.createServer(function(req, res) {
     //code for our server goes here
     
 });
 ```
- ## We need to tell the server how to handle each request
- #### We will add the logic for the server in the body of the function being passed to the *http.createServer()* method
+## We need to tell the server how to handle each request
+#### We will add the logic for the server in the body of the function being passed to the *http.createServer()* method
  
 Log each request that the reserver receives 
 
@@ -42,7 +41,7 @@ res.end("<p>Hello World.</p>");
 ```
 
 ## Starting the Server
----
+
 We need to tell the server to start listening. 
 
 Log a message saying that we are starting the server, and then tell it to start listening using our *port* and *serverUrl* variables
@@ -57,12 +56,13 @@ Open a command window in the same directory as your webserver.js file and run th
     node webServer
 
 You should see a message that your server has started. Open a browser and navigate to the url our server is listening on. What do you see?
+----
 
 #
 #
 #
 ## Now we are going to have our server return an html file from the file system
-----
+
  Add an HMTL file to the directory called "sample.html"
  
  **paste the following html into sample.html**
@@ -82,7 +82,7 @@ You should see a message that your server has started. Open a browser and naviga
 ```
 
 ## Returning a file from our server
-----
+
 **We will need to use node's File System module to read the file we want to return**
 
 Load the File System module at the top of *webserver.js*
