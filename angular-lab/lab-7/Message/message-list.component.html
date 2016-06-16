@@ -1,0 +1,16 @@
+<section layout="row">
+    <md-list>
+        <div ng-repeat="message in $ctrl.messages | orderBy : 'date' ">
+            <message message="message"></message>
+        </div>
+    </md-list>
+</section>
+<section layout="column">
+    <md-white-frame class="md-whiteframe-2dp">
+        <md-input-container class="md-block flex">
+            <label>New Message</label>
+            <textarea ng-model="$ctrl.newMessageText" rows="5" md-select-on-focus></textarea>
+        </md-input-container>
+        <md-button class="md-raised md-primary" flex-offset="75" ng-click="">Post Message</md-button>
+    </md-white-frame>
+</section>
