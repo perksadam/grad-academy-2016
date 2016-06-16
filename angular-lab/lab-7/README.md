@@ -22,6 +22,8 @@ You will need to create a channelService for getting the list of channels. See t
 
 Make each item in the list a link that takes you to the message-list for that channel (directs you to the message-list state with the id of that channel). (see [ui-sref](http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.directive:ui-sref))
 
+We will also want to update the default state for the app in app.config (see otherwise method of [$urlRouterProvider](http://angular-ui.github.io/ui-router/site/#/api/ui.router.router.$urlRouterProvider))
+
 ## References
 
 [ui-router](http://angular-ui.github.io/ui-router/site/#/api/)
