@@ -1,24 +1,25 @@
-# We will be adding a new route to display a user's information
+# We will be adding ability to display list channels that we can then navigate to 
 
-##Create a new state for displaying the user-details
+## The message-list component has been updated to now display the messages of a channel based on the url
 
-Add state to app.config for user-details.
-The url for this state will take the id of the user you want to display.
+Look at the state configuration for the "message-list" state. Notice how it takes a "channelId" as a parameter. This state is now expecting to have a string as the last part of the url which is a channelId.
 
-Make the each user-item in the user-list a link that goes to the user-detail page for that user.
+We are going to add a new state for displaying a list of channels. We will then be able to click on one of those channels and navigate to a specific channel's message-list.
 
-You will also need to create a user-details component which you will display as the template for this new state
+## Create a new state for displaying list of channels
 
-Display some information that you think is important about the user
-- username
-- profile picture
-- whether or not they are active etc.
+Add a new state to the app.config for the "channels" state.
 
-Hint: you can access that Id with the $routeParams service.
+Create a channel-list component that will be used as the template for the "channels" state.
 
+You will need to create a channelService for getting the list of channels. See the [slack documentation](https://api.slack.com/methods/channels.list).
 
-## Add functionality to send the user a message 
-  -you should reuse the new-message component for this
+Make each item in the list a link that takes you to the message-list for that channel (directs you to the message-list state with the id of that channel).
 
-You will need to implement a method in the messageService for sending a direct message.
+## References
 
+[ui-router](http://angular-ui.github.io/ui-router/site/#/api/)
+
+[$stateProvider](http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.$stateProvider)
+
+[ui-sref](http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.directive:ui-sref)
