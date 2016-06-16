@@ -1,0 +1,4 @@
+<div ng-repeat="message in $ctrl.messages">
+    <message message="message"></message>
+</div>
+<new-message on-add-message="$ctrl.addMessage(messageText)" message-text="$ctrl.newMessageText"></new-message>
