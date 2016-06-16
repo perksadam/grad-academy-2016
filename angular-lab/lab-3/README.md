@@ -55,7 +55,7 @@ Once the message-list component is created we want to display it in the app. Rep
 
 Run the app and make sure everything is working.
 
-## Create Ability to Add New Message
+## Add Ability to Create New Message
 
 Add a new method to our controller called "addMessage". Have this method take an argument called messageContent. Implement the method and have it add a new message to our message array, using the value passed in as the contnt of the new mesage. Set the username to whatever you want, and make sure to set the Date of the message appropriately.
 
