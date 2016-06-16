@@ -6,7 +6,7 @@ Update the message component's bindings to take a property called message. Use o
 
 We will also need to remove the code from $onInit that hardcodes the value of ctrl.message.
 
-Now we will be able to pass a message into our message component by:
+Now we will be able to pass a message into our message component:
 
 ```html
 <message message="someMessageObject"></message>
