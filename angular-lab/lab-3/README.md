@@ -55,4 +55,20 @@ Once the message-list component is created we want to display it in the app. Rep
 
 Run the app and make sure everything is working.
 
+## Create Ability to Add New Message
 
+Add a new method to our controller called "addMessage". Have this method take an argument called messageContent. Implement the method and have it add a new message to our message array, using the value passed in as the contnt of the new mesage. Set the username to whatever you want, and make sure to set the Date of the message appropriately.
+
+```javascript
+ctrl.addMessage = function (messageContent){
+    //create new message and put it in messages array
+}
+```
+
+In the message-list template add an input to the bottom of the screen. This input will be used create the "content" for our new messages. 
+
+Use [ngModel](https://docs.angularjs.org/api/ng/directive/ngModel) to bind the input to a property on our controller called "newMessageContent".
+
+Now add a button after the input that reads "Send Message". Use [ng-click](https://docs.angularjs.org/api/ng/directive/ngClick) to bind the clicking of the button to our *addMessage* method. Make sure you pass it content of the message.
+
+Once you are done, make sure all of your changes are working and that you are able to create new messages.
