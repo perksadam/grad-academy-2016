@@ -1,0 +1,15 @@
+{
+  "name": "grad-academy-angular-lab",
+  "version": "1.0.0",
+  "description": "Angular Lab",
+  "main": "",
+  "scripts": {
+  },
+  "dependencies": {
+    "angular": "^1.5.6"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.12",
+    "gulp": "^3.9.1"
+  }
+}
