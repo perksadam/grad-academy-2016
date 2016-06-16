@@ -51,6 +51,8 @@ In this file use angular to create a module and name it "grad-academy-angular".
 })();
 ```
 
+**Note: We want to wrap all of our angular components in an Immediately Invoked Function Expression (IIFE). Here is the [reason why](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#iife)**
+
 ## Bootstrapping The Application
 
 We need to tell Angular what part of the page to bootstrap the application to. We also need to tell it to bootstrap it using our new module.
