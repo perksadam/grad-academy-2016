@@ -15,4 +15,10 @@ Important: Don't forget to add the "message.service.js" file to our index.html
 Make sure to follow [best practices](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#factories).
 ## Using the service in the message-list component
 
-Inject the 
+Inject the messageService into the MessageListController. (see [dependency injection](https://docs.angularjs.org/guide/di))
+
+In the $onInit, use the service to get the messages instead of using a hard-coded value.
+
+Replace the code in the controller's "postMessage" method with a call to the service's postMessage method.
+
+Run the app and make sure everything works as expected.
