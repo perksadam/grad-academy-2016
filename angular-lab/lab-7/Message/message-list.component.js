@@ -8,12 +8,19 @@
         var ctrl  = this;
         var channelId = $stateParams.channelId;
 
-        ctrl.postMessage = function(){
-
+        ctrl.postMessage = function(messageText){
+            messageService.postMessage(messageText, channelId)
+                .then(function(){
+                    refreshMessageList();
+                    ctrl.newMessageText = "";
+                });
         };
 
-
         ctrl.$onInit = function(){
+            refreshMessageList();
+        };
+
+        function refreshMessageList(){
             messageService.getMessages(channelId).then(function(messages){
                 messages.forEach(function(message){
                     userService.getUser(message.user).then(function(user){
