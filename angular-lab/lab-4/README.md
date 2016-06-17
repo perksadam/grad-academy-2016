@@ -31,17 +31,19 @@ You will need to add all of the bindings back into the html.
 ```html
 <md-list-item class="md-2-line">
     <div class="md-list-item-text">
-        <span class="md-title">{{$ctrl.message.userName}} <span class="md-subhead md-caption">- {{$ctrl.message.date}}</span></span>
+        <span class="md-title">{{$ctrl.message.user}} <span class="md-subhead md-caption">- {{$ctrl.message.date}}</span></span>
         <div class="md-body-2">{{$ctrl.message.content}}</div>
     </div>
     <md-divider></md-divider>
 </md-list-item>
 ```
 
-#Add Filters to Format Data And Make it More Presentable
+# Add Filters to Format Data And Make it More Presentable
 
-Filter Date of Message
+Use [Angular Filters](https://docs.angularjs.org/api/ng/filter) to format how our data is displayed
 
-Order Messages by Create Date (newest message at the bottom)
+-Filter Date of Message to the following format: 'MMM d, y h:mm:ss a'
 
-Filter the number of messages shown (limit to 5?)
+-Order Messages by Create Date (newest message at the bottom)
+
+-Filter the number of messages shown (limit to 5)
