@@ -10,7 +10,7 @@ You will need to pass this token in every request you make with slack. Store it 
 
 Inject the $http service. You will use this service to make requests to the slack API.
 
-Update the *getMessages* method to take a *channelId* parameter. We will use this channelId when calling slack's [channels.history](https://api.slack.com/methods/channels.history) endpoint. 
+Update the *getMessages* method to take a *channelId* parameter. We will use this channelId when calling slack's [channels.history](https://api.slack.com/methods/channels.history) endpoint. Limit the number of messages returned from the api to 10.
 
 ```javascript
 function getMessages(channelId){
@@ -36,7 +36,11 @@ Update the *postMessage* method to take a *messageText* and *channelId* paramete
 
 ## Update MessageListController to consume promises
 
-The messageService should now be returning promises. Update the places where the messageService is being used to appropriately handle the promise being returned
+We will need to pass a channelId to the userService's methods now. For now, hard-code the following channelId for your calls to the userService: 
+
+- channelId: C0GAW6YLC
+
+The messageService should now be returning promises. Update the places using the messageService to appropriately handle the promise being returned.
 
 *Hint: update the controller data in the .then of the promises*
 
@@ -48,8 +52,33 @@ Notice that the messages returned from *channels.history* only give us the user'
 
 Create a userService in the services folder.
 
-In the userService add a method to get a user by Id and use the [users.info](https://api.slack.com/methods/users.info) endpoint to retrieve the user's information
+In the userService add a method to get a user by Id and use the [users.info](https://api.slack.com/methods/users.info) endpoint to retrieve the user's information.
+
+Map the user info returned from slack into the following format:
+
+```javascript
+{
+    uesrId: user.id,
+    name: user.name,
+    avatar: user.profile.image_48,
+}
+```
 
 ## Map User Information for each message
 
 In the MessageListController ues the userService to get the user information for each message that is returned from the messageService.
+
+Update the template for the messageComponent in order to display the user's avatar:
+
+```html
+<md-list-item class="md-2-line">
+    <img class="md-avatar" ng-src="{{$ctrl.message.avatar}}">
+    <div class="md-list-item-text">
+        <span class="md-title">{{$ctrl.message.userName}} <span class="md-subhead md-caption">- {{$ctrl.message.date | date : 'medium'}}</span></span>
+        <div class="md-body-2">{{$ctrl.message.content}}</div>
+    </div>
+    <md-divider></md-divider>
+</md-list-item>
+```
+
+Run the app. If everything is working you should see a list of messages from the #chaos channel. You should also see the user's username and avatar with each message.
