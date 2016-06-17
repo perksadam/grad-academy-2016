@@ -6,9 +6,10 @@ Create a "service" folder and add a file called "message.service.js". This servi
 
 In "message.service.js", use the [factory](https://docs.angularjs.org/api/ng/type/angular.Module#factory) method to create a service named *messageService*.
 
+**The service should maintain an array of messages and expose methods to get/manipulate that array**
+
 Add a "postMessage" and "getMessages" method to the service. Move the logic from the message-list controller into these two methods.
 
-**The service should maintain an array of messages and expose methods to get/manipulate that array**
 
 Important: Don't forget to add the "message.service.js" file to our index.html
 
