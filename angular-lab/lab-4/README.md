@@ -19,6 +19,21 @@ Include the following files in the index.html
 
 **We also need to include "ngMaterial" as a dependency in our module.**
 
+## Update html template in the <body> of our index.html
+
+```html
+<md-toolbar md-scroll-shrink>
+    <div class="md-toolbar-tools">
+        <h3>
+            <span>Grad Academy Angular Messenger</span>
+        </h3>
+    </div>
+    <md-content >
+        <message-list></message-list>
+    </md-content>
+</md-toolbar>
+```
+
 ## Update template of message-list to use the below template
 
 ```html
