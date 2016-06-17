@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grad Academy Angular</title>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/angular-material/angular-material.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+    <script src="app.js"></script>
+    <script src="Message/message.component.js"></script>
+    <script src="Message/message-list.component.js"></script>
+</head>
+<body ng-app="grad-academy-angular">
+<md-toolbar md-scroll-shrink>
+    <div class="md-toolbar-tools">
+        <h3>
+            <span>Grad Academy Angular Messenger</span>
+        </h3>
+    </div>
+    <md-content >
+        <message-list></message-list>
+    </md-content>
+</md-toolbar>
+</body>
+</html>
