@@ -1,4 +1,5 @@
-<div ng-repeat="message in $ctrl.messages">
+<div ng-repeat="message in $ctrl.messages | limitTo : 2 | orderBy: 'date' ">
     <message message="message"></message>
 </div>
-<new-message on-add-message="$ctrl.addMessage(messageText)" message-text="$ctrl.newMessageText"></new-message>
+<input ng-model="$ctrl.newMessageText"/>
+<button ng-click="$ctrl.postMessage($ctrl.newMessageText)">Send Message</button>

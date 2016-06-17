@@ -7,7 +7,7 @@
     function MessageListController(){
         var ctrl  = this;
 
-        ctrl.addMessage = function(messageText){
+        ctrl.postMessage = function(messageText){
                 ctrl.messages.push({
                     content: messageText,
                     user: "me",
@@ -23,16 +23,15 @@
                     date: new Date("2016-05-30T09:00")
                 },
                 {
-                    user: "Adam",
-                    content: "Let's learn some Angular",
+                    user: "Jim",
+                    content: "I like coding with babies.",
                     date: new Date('2016-05-30T08:45')
                 },
                 {
-                    user: "Adam",
-                    content: "This is so fun!!",
+                    user: "Jim",
+                    content: "I also like bounded contexts!",
                     date: new Date('2016-05-30T10:00')
-                }
-            ];
+                }];
         }
     }
 
