@@ -64,6 +64,8 @@ Map the user info returned from slack into the following format:
 }
 ```
 
+**Performance: Since user info shouldn't change that often, we want to cache the call to get the user so we are not fetching it every time. Make sure to set the "cache" option to true on the request to get a user**
+
 ## Map User Information for each message
 
 In the MessageListController ues the userService to get the user information for each message that is returned from the messageService.
