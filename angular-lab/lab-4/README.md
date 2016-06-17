@@ -42,8 +42,7 @@ You will need to add all of the bindings back into the html.
 
 Use [Angular Filters](https://docs.angularjs.org/api/ng/filter) to format how our data is displayed
 
--Filter Date of Message to the following format: 'MMM d, y h:mm:ss a'
+- Filter Date of Message to the following format: 'MMM d, y h:mm:ss a'
 
--Order Messages by Create Date (newest message at the bottom)
+- Order Messages by Create Date (newest message at the bottom)
 
--Filter the number of messages shown (limit to 5)
