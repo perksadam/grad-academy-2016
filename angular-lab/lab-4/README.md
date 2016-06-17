@@ -2,6 +2,23 @@
 
 We will be using [Angular Material](https://material.angularjs.org/latest/) to style our app.
 
+Install Angular Material in our app
+
+    npm install --save angular-material
+
+Include the following files in the index.html
+
+```html
+<script src="node_modules/angular-aria/angular-aria.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/angular-material/angular-material.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+```
+
+**We also need to include "ngMaterial" as a dependency in our module.**
+
 ## Update template of message-list to use the below template
 
 ```html
