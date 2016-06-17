@@ -71,4 +71,6 @@ Use [ngModel](https://docs.angularjs.org/api/ng/directive/ngModel) to bind the i
 
 Now add a button after the input that reads "Send Message". Use [ng-click](https://docs.angularjs.org/api/ng/directive/ngClick) to bind the clicking of the button to our *addMessage* method. Make sure you pass it content of the message.
 
+Also make sure you are clearing the value of the "newMessageContent" property after you add the message.
+
 Once you are done, make sure all of your changes are working and that you are able to create new messages.
