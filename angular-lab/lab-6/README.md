@@ -2,11 +2,11 @@
 
 We will be using the slack API in this lab to get and create messages, as well as display user information for each message.
 
-## Update the messageService
-
 Obtain an api token from slack [here](https://api.slack.com/docs/oauth-test-tokens)
 
 You will need to pass this token in every request you make with slack. Store it in a variable in the messageService.
+
+## Update the messageService
 
 Inject the $http service. You will use this service to make requests to the slack API.
 
